@@ -5,12 +5,10 @@ namespace Yaw{
         private double _apparentWindSpeed;
 
         public double ApparentWindAngle => _apparentWindAngle;
-
         public double ApparentWindSpeed => _apparentWindSpeed;
 
         public void CalculateApparentWindSpeed(double windSpeed, double riderSpeed, double trueAngle)
         {
-
             _apparentWindSpeed = GetApparentWindSpeed(windSpeed, riderSpeed, ConvertToRadians(trueAngle));
             _apparentWindAngle = GetApparentWindAngle(trueAngle, windSpeed, riderSpeed);
         }
